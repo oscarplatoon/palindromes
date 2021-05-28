@@ -3,26 +3,22 @@
 // Remove all non alpha-numeric chars from WORD and store in CLEANWORD
 // reverse CLEANWORD and store in REVERSEWORD
 // compare CLEANWORD and REVERSEWORD and return the result
-// exports.
+exports.palindrome = function(inputWord) {
+    
+    let word = ""
 
-let palindrome = function(word) {
-    if (typeof(word) === "number") {
-      word = toString(word);
+    if (typeof(inputWord) === "number") {
+      word = inputWord.toString();
+    } else {
+      word = inputWord.slice();
     }
    
     let cleanWord = word.replace(/\W/g, '')
     cleanWord = cleanWord.toLowerCase();
 
-    let reverseWordArray = [];
-    
-    for (let i = 0; i < word.length; i++){
-      reverseWordArray.push(cleanWord[i]);
-    }
-
-    let reverseWord = reverseWordArray.join("");
-
+    let reverseWord = cleanWord.split("").reverse().join("");
+ 
     return reverseWord === cleanWord;
 
 };
 
-console.log(palindrome("Noon"))
