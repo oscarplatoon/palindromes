@@ -1,15 +1,19 @@
-# Can you translate this driver code to unit tests?
-
+import unittest
 from palindrome import palindrome
-# This should return a bunch of trues
-print(palindrome('racecar') == True)
-print(palindrome('Noon') == True)
-print(palindrome('ciVic') == True)
-print(palindrome('nice') == False)
-print(palindrome(434) == True)
-print(palindrome(123) == False)
-print(palindrome('bomb') == False)
 
-print("The following should be True if you're trying to do the extra portion of this challenge")
-print(palindrome('Sore was I ere I saw Eros.') == True)
-print(palindrome('A man, a plan, a canal -- Panama') == True)
+class TestingOfPalindrome(unittest.TestCase):
+  def test_of_single_word(self):
+    print(palindrome('racecar') == True)
+    print(palindrome('Noon') == True)
+    print(palindrome('ciVic') == True)
+    print(palindrome('nice') == False)
+    print(palindrome(434) == True)
+    print(palindrome(123) == False)
+    print(palindrome('bomb') == False)
+
+  def test_of_a_phrase(self):
+    print(palindrome('Sore was I ere I saw Eros.') == True)
+    print(palindrome('A man, a plan, a canal -- Panama') == True)
+
+if __name__ == '__main__':
+  unittest.main()
