@@ -3,9 +3,9 @@ from palindrome import palindrome
 
 class TestingOfPalindrome(unittest.TestCase):
   def test_of_single_word(self):
-    #print(palindrome('racecar') == True)
-    #print(palindrome('Noon') == True)
-    #print(palindrome('ciVic') == True)
+    print(palindrome('racecar') == True)
+    print(palindrome('Noon') == True)
+    print(palindrome('ciVic') == True)
     print(palindrome('nice') == False)
     print(palindrome(434) == True)
     print(palindrome(123) == False)
