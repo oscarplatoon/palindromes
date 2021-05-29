@@ -1,5 +1,5 @@
-//add export.
-palindrome = function(word) {
+
+function palindrome(word) {
   //Placeholder for integer to string
   let numToString 
   let reversedNumToString
@@ -34,4 +34,4 @@ palindrome = function(word) {
 
 };
 
-palindrome('racecar')
+module.exports = palindrome
