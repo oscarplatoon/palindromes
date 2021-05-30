@@ -26,13 +26,13 @@ class palindromeTestCase(unittest.TestCase):
         """ should return false """
         actual_output = palindrome(123)
         expected_output = "false"
-        self.assertTrue(actual_output, expected_output)
+        self.assertFalse(actual_output, expected_output)
         
     def test_returns_true(self):
         """ should return false """
         actual_output = palindrome("bomb")
         expected_output = "false"
-        self.assertTrue(actual_output, expected_output)
+        self.assertFalse(actual_output, expected_output)
         
     def test_returns_true(self):
         """ should return true """
