@@ -1,15 +1,56 @@
-# Can you translate this driver code to unit tests?
-
 from palindrome import palindrome
-# This should return a bunch of trues
-print(palindrome('racecar') == True)
-print(palindrome('Noon') == True)
-print(palindrome('ciVic') == True)
-print(palindrome('nice') == False)
-print(palindrome(434) == True)
-print(palindrome(123) == False)
-print(palindrome('bomb') == False)
+import unittest
 
-print("The following should be True if you're trying to do the extra portion of this challenge")
-print(palindrome('Sore was I ere I saw Eros.') == True)
-print(palindrome('A man, a plan, a canal -- Panama') == True)
+class palindromeTestCase(unittest.TestCase):
+    """ Tests for 'palindrome.py' """
+    
+    def test_returns_true(self):
+        """ should return true """
+        actual_output = palindrome("racecar")
+        expected_output = "true"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return true """
+        actual_output = palindrome(434)
+        expected_output = "true"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return true """
+        actual_output = palindrome("Noon")
+        expected_output = "true"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return false """
+        actual_output = palindrome(123)
+        expected_output = "false"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return false """
+        actual_output = palindrome("bomb")
+        expected_output = "false"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return true """
+        actual_output = palindrome("Sore was I ere I saw Eros.")
+        expected_output = "true"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return true """
+        actual_output = palindrome("A man, a plan, a canal -- Panama")
+        expected_output = "true"
+        self.assertTrue(actual_output, expected_output)
+        
+    def test_returns_true(self):
+        """ should return true """
+        actual_output = palindrome("21s-Race Cars!? 12%")
+        expected_output = "true"
+        self.assertTrue(actual_output, expected_output)
+        
+if __name__ == '__main__':
+    unittest.main()
