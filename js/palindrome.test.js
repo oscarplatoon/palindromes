@@ -3,5 +3,6 @@
 const { expect } = require('@jest/globals');
 const palindrome = require('./palindrome');
 test('will return true if the word is plaindrome', () => {
-  expect(palindrome('abc')).toBe('abc');
+  expect(palindrome("Sore was I ere I saw Eros.")).toBe(true);
+  expect(palindrome("A man, a plan, a canal -- Panama")).toBe(true);
 })
