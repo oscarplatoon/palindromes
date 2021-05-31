@@ -4,7 +4,7 @@
 // reverse CLEANWORD and store in REVERSEWORD
 // compare CLEANWORD and REVERSEWORD and return the result
 exports.palindrome = function(inputWord) {
-    
+
     let word = ""
 
     if (typeof(inputWord) === "number") {
@@ -17,7 +17,7 @@ exports.palindrome = function(inputWord) {
     cleanWord = cleanWord.toLowerCase();
 
     let reverseWord = cleanWord.split("").reverse().join("");
- 
+   
     return reverseWord === cleanWord;
 
 };
