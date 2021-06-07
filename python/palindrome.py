@@ -1,9 +1,10 @@
-def palindrome(word):
+def palindrome(string):
     
-    my_str = " "
-    first_str = my_str.lower()
-    second_str = reversed(first_str)
-    
-    if list(first_str) == list(second_str):
-        return second_str == first_str
+    if len(string) < 1: 
+        return True
+        
+    if string[0] == string[len(string) - 1]:
+        return palindrome(string[1 : len(string) -1])
+    else:
+        False
 
