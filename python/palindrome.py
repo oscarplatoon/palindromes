@@ -4,13 +4,12 @@ def palindrome(word):
         return True
     else:
         lowered_word = word.lower()
-        
-        left = 0
-        right = len(lowered_word)-1
+        return pal_helper(lowered_word,0,len(lowered_word)-1)
 
-        while(left < right):
-            if lowered_word[left] != lowered_word[right]:
-                return False
-            left += 1
-            right -= 1
+def pal_helper(word, left, right):
+    if left > right:
         return True
+    else:
+        if word[left] != word[right]:
+            return False
+        return pal_helper(word, left+1, right-1)
